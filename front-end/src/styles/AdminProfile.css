@@ -1,0 +1,13 @@
+.admin-profile {
+  margin-top: 30px;
+}
+
+.admin-profile > * {
+  background-color: var(--bright-element-bg-color);
+  box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 17px 0 rgba(0, 0, 0, .25);
+  -moz-box-shadow: 0 4px 17px 0 rgba(0, 0, 0, .25);
+  font-weight: 500;
+  margin: 20px 0;
+  padding: 12px;
+}
