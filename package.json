@@ -1,0 +1,14 @@
+{
+  "name": "openbeer-v1",
+  "version": "1.0.0",
+  "description": "Scripts para automatizar a inicialização da aplicação.",
+  "scripts": {
+    "start": "npm run install-back && npm run install-front && npm run start-back && npm run start-front",
+    "install-back": "npm --prefix back-end/ install",
+    "start-back": "npm --prefix back-end/ run start&",
+    "install-front": "npm --prefix front-end/ install",
+    "start-front": "npm --prefix front-end/ run start"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
