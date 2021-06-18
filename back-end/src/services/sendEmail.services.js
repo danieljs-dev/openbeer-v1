@@ -1,10 +1,12 @@
+require('dotenv/config');
+
 const mailer = require('./mailer.services');
 
 const welcomeEmail = (email, name) => {
   mailer.sendMail({
     text: 'Boas vindas!',
     subject: 'Bem vindo(a) ao OpenBeer!',
-    from: 'OpenBeer <comercial.openbeer@gmail.com',
+    from: `OpenBeer <${process.env.GMAIL_ACCOUNT}>`,
     to: [email],
     html: `
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -297,7 +299,7 @@ const welcomeEmail = (email, name) => {
 const forgotPassword = (email, token) => {
   mailer.sendMail({
     subject: 'OpenBeer - password reset',
-    from: 'OpenBeer <comercial.openbeer@gmail.com',
+    from: `OpenBeer <${process.env.GMAIL_ACCOUNT}>`,
     to: [email],
     html: `
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
